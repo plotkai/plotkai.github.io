@@ -131,8 +131,8 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Workshops</h3>
-                        <p class="text-muted">We provide you hands-on, interactive learning with expert instructors over various technologies.</p>
+                        <h3>Advertisement</h3>
+                        <p class="text-muted">We help you get popular through the power of internet.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -182,7 +182,7 @@
                         <div class="form-group">
                             <label for="name">
                                 Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" disabled/>
                         </div>
                         <div class="form-group">
                             <label for="email">
@@ -190,7 +190,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" disabled/></div>
                         </div>
                         <div class="form-group">
                             <label for="subject">
@@ -208,11 +208,11 @@
                             <label for="name">
                                 Message</label>
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Message"></textarea>
+                                placeholder="Message" disabled></textarea>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                        <button type="submit" class="btn btn-skin pull-right" id="btnContactUs" disabled>
                             Send Message</button>
                     </div>
                 </div>
@@ -233,6 +233,10 @@
 				<address>
 				  <strong>Email</strong><br>
 				  <a href="mailto:#">plotkai.interactive@gmail.com</a><br />
+				  <ul class="company-social">
+                            <li class="social-facebook"><a href="https://www.facebook.com/plotkai/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        </ul>	</li>
 				   
 				</address>	
 			
@@ -271,24 +275,6 @@
     <script src="js/creative.js"></script>
 
 </body>
-<?php
 
-
-if(isset($_GET['subject']) && function_exists($_GET['runFunction']))
-call_user_func($_GET['subject']);
-else
-echo "Function not found or wrong input";
-
-function test()
-{
-echo("test");
-}
-
-function hello()
-{
-echo("hello");
-}
-
-?>
 
 </html>
