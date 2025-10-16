@@ -185,7 +185,7 @@ a.download-big img  {
 	margin-right: 10px;
 }
 a.download-big:hover {
-	background-color: rgba(255, 43, 43, 0.507);
+	scale: 1.05;
 }
 .wrapper-inside nav a img {
 	margin-right: 10px;
