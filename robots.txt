@@ -1,4 +1,8 @@
+# Robots.txt for plotkai.github.io
 User-agent: *
+Disallow:
+
+# Allow crawling of all content
 Allow: /
 
 # Sitemap location
