@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Info -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plotkai Interactive — Blog">
+    <meta name="twitter:description" content="The Product Tech Partner for Ambitious Startups">
+    <meta name="twitter:image:src" content="logo.png">
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Plotkai Interactive: Blog">
+    <meta property="og:description" content="The Product Tech Partner for Ambitious Startups">
+    <meta property="og:image" content="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=PT+Serif+Caption&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Plotkai Interactive: Blog</title>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRVQMMXFF5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GRVQMMXFF5');
+    </script>
+
+    <link rel="preconnect" href="https://plotkai.in/" crossorigin="true">
+    <link rel="dns-prefetch" href="https://plotkai.in/">
+  </head>
+
+  <body class="contact-page">
+    <div class="wrapper">
+      <header>
+        <div class="header-wrapper">
+          <div class="header-inside">
+            <figure class="logo">
+              <a href="https://plotkai.in/">
+                <img src="img/logo.png" class="text" alt="Plotkai">
+              </a>
+            </figure>
+            <nav>
+              <ul class="menu">
+                <li>
+                  <a href="https://api.whatsapp.com/send/?phone=919044399422&text&type=phone_number&app_absent=0" class="features">
+                    Getting Started
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="blog.html">Showcase</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="wrapper-inside">
+        <h1><span>Blog & Insights</span></h1>
+        <p>Thoughts, tutorials, and insights on digital product development from the Plotkai team.</p>
+        
+        <!-- Blog posts will be rendered here -->
+        <div id="blog-posts"></div>
+        
+        <!-- Blog post template -->
+        <script id="blog-template" type="text/x-handlebars-template">
+          {{#each blog.posts}}
+          <article class="blog-post-preview" data-post-id="{{id}}">
+            <div class="post-preview-content">
+              <h2 class="post-title">{{title}}</h2>
+              <div class="post-preview-meta">
+                <span class="post-date">{{publishDate}}</span>
+                <span class="post-category">{{category}}</span>
+                {{#if featured}}<span class="post-featured">Featured</span>{{/if}}
+              </div>
+              <p class="post-excerpt">{{excerpt}}</p>
+            </div>
+          </article>
+          {{/each}}
+        </script>
+
+        <!-- Modal template for full post -->
+        <script id="modal-template" type="text/x-handlebars-template">
+          <div class="modal-overlay" id="post-modal">
+            <div class="modal-content">
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+              
+              <article class="blog-post-full">
+                <header class="post-header">
+                  {{#if featuredImage}}
+                  <div class="post-featured-image">
+                    <img src="{{featuredImage.url}}" alt="{{featuredImage.alt}}" />
+                    {{#if featuredImage.caption}}
+                    <p class="image-caption">{{featuredImage.caption}}</p>
+                    {{/if}}
+                  </div>
+                  {{/if}}
+                  
+                  <h1>{{title}}</h1>
+                  
+                  <div class="post-meta">
+                    <span class="author">By {{author.name}}</span>
+                    <span class="date">{{publishDate}}</span>
+                    <span class="read-time">{{readTime}}</span>
+                    <span class="category">{{category}}</span>
+                  </div>
+                </header>
+                
+                <div class="post-content">
+                  {{#each content}}
+                    {{#if (eq type "paragraph")}}
+                      <p>{{{text}}}</p>
+                    {{/if}}
+                    
+                    {{#if (eq type "heading")}}
+                      {{#if (eq level 2)}}<h2>{{text}}</h2>{{/if}}
+                      {{#if (eq level 3)}}<h3>{{text}}</h3>{{/if}}
+                      {{#if (eq level 4)}}<h4>{{text}}</h4>{{/if}}
+                    {{/if}}
+                    
+                    {{#if (eq type "image")}}
+                      <figure class="content-image">
+                        <img src="{{url}}" alt="{{alt}}" {{#if width}}style="width: {{width}}"{{/if}} />
+                        {{#if caption}}<figcaption>{{caption}}</figcaption>{{/if}}
+                      </figure>
+                    {{/if}}
+                    
+                    {{#if (eq type "list")}}
+                      {{#if (eq listType "ordered")}}
+                        <ol>
+                          {{#each items}}<li>{{this}}</li>{{/each}}
+                        </ol>
+                      {{else}}
+                        <ul>
+                          {{#each items}}<li>{{this}}</li>{{/each}}
+                        </ul>
+                      {{/if}}
+                    {{/if}}
+                    
+                    {{#if (eq type "code")}}
+                      <div class="code-block">
+                        {{#if title}}<div class="code-title">{{title}}</div>{{/if}}
+                        <pre><code class="language-{{language}}">{{code}}</code></pre>
+                      </div>
+                    {{/if}}
+                    
+                    {{#if (eq type "quote")}}
+                      <blockquote>
+                        <p>{{text}}</p>
+                        {{#if author}}<cite>— {{author}}</cite>{{/if}}
+                      </blockquote>
+                    {{/if}}
+                  {{/each}}
+                </div>
+                
+                <footer class="post-footer">
+                  <div class="tags">
+                    {{#each tags}}
+                      <span class="tag">{{this}}</span>
+                    {{/each}}
+                  </div>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </script>
+
+      </div>
+    </div>
+    <footer>
+      <p>
+        © 2025 <a href="https://plotkai.in/">Plotkai Interactive</a><br>
+        Made with love in India.
+      </p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="blog.html">Showcase</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    
+    <!-- Optional: Include Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+      // Register custom Handlebars helpers
+      Handlebars.registerHelper('eq', function(a, b) {
+        return a === b;
+      });
+
+      // Global blog data
+      let blogData = null;
+      let modalTemplate = null;
+
+      // Modal functions
+      function openPostModal(postId) {
+        const post = blogData.blog.posts.find(p => p.id === postId);
+        if (post && modalTemplate) {
+          const modalHtml = modalTemplate(post);
+          document.body.insertAdjacentHTML('beforeend', modalHtml);
+          
+          // Prevent body scroll
+          document.body.style.overflow = 'hidden';
+          
+          // Add syntax highlighting if Prism.js is available
+          if (typeof Prism !== 'undefined') {
+            Prism.highlightAll();
+          }
+          
+          // Add escape key listener
+          document.addEventListener('keydown', handleEscape);
+        }
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('post-modal');
+        if (modal) {
+          modal.remove();
+          document.body.style.overflow = 'auto';
+          document.removeEventListener('keydown', handleEscape);
+        }
+      }
+
+      function handleEscape(event) {
+        if (event.key === 'Escape') {
+          closeModal();
+        }
+      }
+
+      // Fetch blog data and render
+      async function loadBlog() {
+        try {
+          console.log('Starting to load blog...');
+          
+          // Try to load the JSON data
+          const response = await fetch('./blog.json');
+          console.log('Fetch response status:', response.status);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          
+          blogData = await response.json();
+          console.log('Blog data loaded:', blogData);
+          
+          // Get the templates
+          const blogTemplateElement = document.getElementById('blog-template');
+          const modalTemplateElement = document.getElementById('modal-template');
+          
+          if (!blogTemplateElement || !modalTemplateElement) {
+            throw new Error('Templates not found');
+          }
+          
+          const blogTemplate = Handlebars.compile(blogTemplateElement.innerHTML);
+          modalTemplate = Handlebars.compile(modalTemplateElement.innerHTML);
+          
+          // Render the blog list
+          const html = blogTemplate(blogData);
+          const blogPostsElement = document.getElementById('blog-posts');
+          
+          if (blogPostsElement) {
+            blogPostsElement.innerHTML = html;
+            console.log('Blog posts rendered successfully');
+            
+            // Add click listeners to post previews
+            const postPreviews = document.querySelectorAll('.blog-post-preview');
+            postPreviews.forEach(preview => {
+              preview.addEventListener('click', function() {
+                const postId = this.getAttribute('data-post-id');
+                openPostModal(postId);
+              });
+            });
+          }
+          
+        } catch (error) {
+          console.error('Error loading blog:', error);
+          const blogPostsElement = document.getElementById('blog-posts');
+          if (blogPostsElement) {
+            blogPostsElement.innerHTML = `
+              <div style="padding: 20px; background: #f0f0f0; border-radius: 8px; margin: 20px 0;">
+                <h3>Blog posts are temporarily unavailable</h3>
+                <p>This might be due to:</p>
+                <ul>
+                  <li>Opening the file directly in browser (try using a local server)</li>
+                  <li>CORS restrictions</li>
+                  <li>Network connectivity issues</li>
+                </ul>
+                <p><strong>For local development:</strong> Try running a local server like:</p>
+                <code>python -m http.server 8000</code> or <code>npx serve .</code>
+                <p>Then open <code>http://localhost:8000/blog.html</code></p>
+              </div>
+            `;
+          }
+        }
+      }
+
+      // Load blog when page is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadBlog);
+      } else {
+        loadBlog();
+      }
+
+      // Close modal when clicking outside
+      document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal-overlay')) {
+          closeModal();
+        }
+      });
+    </script>
+
+  </body>
+</html>

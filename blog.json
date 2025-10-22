@@ -1,0 +1,123 @@
+{
+  "blog": {
+    "title": "Plotkai Interactive Blog",
+    "description": "Insights, tutorials, and thoughts on digital product development",
+    "baseUrl": "https://plotkai.github.io",
+    "posts": [
+      {
+        "id": "1",
+        "title": "Building Your First MVP: Lessons from the Trenches",
+        "slug": "building-first-mvp-lessons",
+        "author": {
+          "name": "Plotkai Team",
+          "email": "hello@plotkai.in",
+          "avatar": "img/blog/me.jpg"
+        },
+        "publishDate": "2025-10-20",
+        "lastModified": "2025-10-20",
+        "category": "Product Development",
+        "tags": ["MVP", "Startup", "Product Strategy"],
+        "excerpt": "From idea validation to launch, here's what we learned building dozens of MVPs for ambitious startups.",
+        "featured": true,
+        "featuredImage": {
+          "url": "img/blog/tech-stack-2025.png",
+          "alt": "MVP Development Process",
+          "caption": "The iterative process of MVP development"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Every great product starts with an idea, but not every idea becomes a great product. The bridge between concept and reality is the Minimum Viable Product (MVP) – and building one effectively is both an art and a science."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "What Makes an MVP Actually Viable?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Too often, we see startups confuse 'minimum' with 'incomplete'. An MVP isn't a half-baked product – it's a complete solution to a specific problem, just without the bells and whistles."
+          },
+          {
+            "type": "image",
+            "url": "img/blog/tech-stack-2025.png",
+            "alt": "MVP vs Full Product Comparison",
+            "caption": "MVP should be a complete solution, not an incomplete product",
+            "width": "100%"
+          },
+          {
+            "type": "list",
+            "listType": "unordered",
+            "items": [
+              "Focus on core user needs, not nice-to-have features",
+              "Ensure the product actually solves the problem",
+              "Build for learning, not for perfection",
+              "Plan for iteration from day one"
+            ]
+          },
+          {
+            "type": "code",
+            "language": "javascript",
+            "title": "Simple Feature Toggle Implementation",
+            "code": "// Feature toggles help you control MVP features\nconst featureFlags = {\n  advancedAnalytics: false,\n  socialLogin: true,\n  chatSupport: false\n};\n\nfunction isFeatureEnabled(feature) {\n  return featureFlags[feature] || false;\n}\n\n// Usage in your component\nif (isFeatureEnabled('socialLogin')) {\n  renderSocialLoginButton();\n}"
+          },
+          {
+            "type": "quote",
+            "text": "The goal of an MVP is not to launch the perfect product, but to start the learning process as quickly as possible.",
+            "author": "Eric Ries"
+          },
+          {
+            "type": "paragraph",
+            "text": "Remember, your MVP is the first step in a journey, not the destination. Build it with intention, launch it with confidence, and iterate it with wisdom."
+          }
+        ],
+        "readTime": "5 min read",
+        "status": "published"
+      },
+      {
+        "id": "2",
+        "title": "The Tech Stack That Scales: Our 2025 Recommendations",
+        "slug": "tech-stack-2025-recommendations",
+        "author": {
+          "name": "Plotkai Team",
+          "email": "hello@plotkai.in",
+          "avatar": "img/blog/me.jpg"
+        },
+        "publishDate": "2025-10-15",
+        "lastModified": "2025-10-15",
+        "category": "Technology",
+        "tags": ["Tech Stack", "Development", "Best Practices"],
+        "excerpt": "From frontend frameworks to deployment strategies, here's the tech stack we recommend for modern web applications in 2025.",
+        "featured": false,
+        "featuredImage": {
+          "url": "img/blog/tech-stack-2025.png",
+          "alt": "Modern Tech Stack 2025",
+          "caption": "The technology landscape in 2025"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Choosing the right technology stack is crucial for any project's success. Here's our battle-tested recommendations for 2025."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Frontend: React with Next.js"
+          },
+          {
+            "type": "paragraph",
+            "text": "Next.js continues to dominate the React ecosystem with its excellent developer experience and performance optimizations."
+          },
+          {
+            "type": "code",
+            "language": "bash",
+            "title": "Quick Next.js Setup",
+            "code": "npx create-next-app@latest my-app\ncd my-app\nnpm run dev"
+          }
+        ],
+        "readTime": "8 min read",
+        "status": "published"
+      }
+    ]
+  }
+}

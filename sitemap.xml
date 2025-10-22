@@ -7,10 +7,16 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://plotkai.in/about.html</loc>
-    <lastmod>2025-10-16</lastmod>
+    <loc>https://plotkai.github.io/about.html</loc>
+    <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://plotkai.github.io/blog.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://plotkai.in/privacy.html</loc>
