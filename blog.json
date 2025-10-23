@@ -6,116 +6,147 @@
     "posts": [
       {
         "id": "1",
-        "title": "Building Your First MVP: Lessons from the Trenches",
-        "slug": "building-first-mvp-lessons",
+        "title": "Hello from Plotkai Interactive – Why We Started",
+        "slug": "hello-from-plotkai-interactive-why-we-started",
         "author": {
           "name": "Plotkai Team",
           "email": "hello@plotkai.in",
           "avatar": "img/blog/me.jpg"
         },
-        "publishDate": "2025-10-20",
-        "lastModified": "2025-10-20",
-        "category": "Product Development",
-        "tags": ["MVP", "Startup", "Product Strategy"],
-        "excerpt": "From idea validation to launch, here's what we learned building dozens of MVPs for ambitious startups.",
-        "featured": true,
+        "publishDate": "2025-10-23",
+        "lastModified": "2025-10-23",
+        "category": "About Us",
+        "tags": ["Introduction", "Digital Agency", "Plotkai Interactive"],
+        "excerpt": "We’re Plotkai Interactive — a creative digital agency on a mission to make technology accessible and human.",
+        "featured": false,
         "featuredImage": {
-          "url": "img/blog/tech-stack-2025.png",
-          "alt": "MVP Development Process",
-          "caption": "The iterative process of MVP development"
+          "url": "img/blog/business-card-back.jpg",
+          "alt": "Plotkai Interactive Team",
+          "caption": "The Plotkai Interactive team at work"
         },
         "content": [
           {
             "type": "paragraph",
-            "text": "Every great product starts with an idea, but not every idea becomes a great product. The bridge between concept and reality is the Minimum Viable Product (MVP) – and building one effectively is both an art and a science."
+            "text": "Hello and welcome to Plotkai Interactive. We’re a creative digital agency based in Lucknow, India, specializing in web development, branding, and digital marketing. Our mission? To blend creativity with technology and build standout digital experiences that drive real business growth."
+          },
+          {
+            "type": "paragraph",
+            "text": "We started Plotkai because we believe that great ideas deserve more than just ‘good enough’ execution. Too many tools complicate what should be simple — turning ideas into digital experiences should be clear, empowering, and human-centred."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "What Makes an MVP Actually Viable?"
+            "text": "Our Approach"
           },
           {
             "type": "paragraph",
-            "text": "Too often, we see startups confuse 'minimum' with 'incomplete'. An MVP isn't a half-baked product – it's a complete solution to a specific problem, just without the bells and whistles."
+            "text": "We follow a consultative process: research & analysis → design & planning → development & launch. Our goal is to ensure each project is both visually stunning and highly functional."
           },
           {
-            "type": "image",
-            "url": "img/blog/tech-stack-2025.png",
-            "alt": "MVP vs Full Product Comparison",
-            "caption": "MVP should be a complete solution, not an incomplete product",
-            "width": "100%"
+            "type": "paragraph",
+            "text": "Whether you’re a startup looking to craft your first product, or an established business aiming to reinvent your digital presence, we’re here to partner with you. Thanks for stopping by — let’s make something meaningful together."
+          }
+        ],
+        "readTime": "2 min read",
+        "status": "published"
+      },
+      {
+        "id": "2",
+        "title": "Yognishtha Trust: A Zero-Cost, Seamless Deployment Journey",
+        "slug": "yognishtha-trust-zero-cost-deployment",
+        "author": {
+          "name": "Plotkai Team",
+          "email": "hello@plotkai.in",
+          "avatar": "img/blog/me.jpg"
+        },
+        "publishDate": "2025-10-23",
+        "lastModified": "2025-10-23",
+        "category": "Client Projects",
+        "tags": ["Web Development", "GCP", "Automation", "Deployment Pipeline"],
+        "excerpt": "How Plotkai Interactive delivered a zero-cost, fully automated website for Yognishtha Trust — with a seamless build and deployment pipeline that required just one iteration.",
+        "featured": true,
+        "featuredImage": {
+          "url": "https://yognishthatrust.org/images/yognishtha_50.jpeg",
+          "alt": "Yognishtha Trust Website Preview",
+          "caption": "A minimal, performance-optimized website built for Yognishtha Trust"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "At Plotkai Interactive, we take pride in building scalable and cost-efficient digital foundations for organizations doing meaningful work. One such collaboration was with Yognishtha Trust — a non-profit initiative focused on holistic wellbeing and community upliftment. Their goal was simple: to have a clean, fast, and sustainable website that communicated their mission effectively without recurring infrastructure costs."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Building for Simplicity and Impact"
+          },
+          {
+            "type": "paragraph",
+            "text": "Instead of over-engineering the stack, we focused on efficiency. The site was designed with a minimal front-end, static content generation, and a fully automated CI/CD pipeline. Everything runs on Google Cloud’s free-tier infrastructure — meaning Yognishtha Trust pays **zero ongoing cost** for hosting or maintenance."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "A Seamless Deployment Pipeline"
+          },
+          {
+            "type": "paragraph",
+            "text": "The deployment process was fully automated using GitHub Actions connected to Google Cloud Run. Every commit to the main branch triggers a build, runs validations, and deploys instantly. No manual intervention. No downtime. This ensures the team can make updates anytime with confidence — the infrastructure takes care of itself."
           },
           {
             "type": "list",
             "listType": "unordered",
             "items": [
-              "Focus on core user needs, not nice-to-have features",
-              "Ensure the product actually solves the problem",
-              "Build for learning, not for perfection",
-              "Plan for iteration from day one"
+              "Fully automated build and deploy workflow",
+              "Hosted on Google Cloud Run free tier",
+              "Optimized for speed and low compute footprint",
+              "Single-iteration delivery — ready from concept to launch in one cycle"
             ]
-          },
-          {
-            "type": "code",
-            "language": "javascript",
-            "title": "Simple Feature Toggle Implementation",
-            "code": "// Feature toggles help you control MVP features\nconst featureFlags = {\n  advancedAnalytics: false,\n  socialLogin: true,\n  chatSupport: false\n};\n\nfunction isFeatureEnabled(feature) {\n  return featureFlags[feature] || false;\n}\n\n// Usage in your component\nif (isFeatureEnabled('socialLogin')) {\n  renderSocialLoginButton();\n}"
-          },
-          {
-            "type": "quote",
-            "text": "The goal of an MVP is not to launch the perfect product, but to start the learning process as quickly as possible.",
-            "author": "Eric Ries"
-          },
-          {
-            "type": "paragraph",
-            "text": "Remember, your MVP is the first step in a journey, not the destination. Build it with intention, launch it with confidence, and iterate it with wisdom."
-          }
-        ],
-        "readTime": "5 min read",
-        "status": "published"
-      },
-      {
-        "id": "2",
-        "title": "The Tech Stack That Scales: Our 2025 Recommendations",
-        "slug": "tech-stack-2025-recommendations",
-        "author": {
-          "name": "Plotkai Team",
-          "email": "hello@plotkai.in",
-          "avatar": "img/blog/me.jpg"
-        },
-        "publishDate": "2025-10-15",
-        "lastModified": "2025-10-15",
-        "category": "Technology",
-        "tags": ["Tech Stack", "Development", "Best Practices"],
-        "excerpt": "From frontend frameworks to deployment strategies, here's the tech stack we recommend for modern web applications in 2025.",
-        "featured": false,
-        "featuredImage": {
-          "url": "img/blog/tech-stack-2025.png",
-          "alt": "Modern Tech Stack 2025",
-          "caption": "The technology landscape in 2025"
-        },
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Choosing the right technology stack is crucial for any project's success. Here's our battle-tested recommendations for 2025."
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Frontend: React with Next.js"
+            "text": "Negligible Cost, Maximum Value"
           },
           {
             "type": "paragraph",
-            "text": "Next.js continues to dominate the React ecosystem with its excellent developer experience and performance optimizations."
+            "text": "The project was designed intentionally to minimize cost for the client. By leveraging Google Cloud’s always-free limits and an efficient deployment architecture, the ongoing cost remains **negligible to none**. Yognishtha Trust now has a sustainable digital presence that doesn’t depend on paid infrastructure or manual upkeep."
+          },
+          {
+            "type": "quote",
+            "text": "“Our goal was to create a digital home for Yognishtha Trust that is as peaceful and enduring as the values it represents — lightweight, reliable, and cost-free.”",
+            "author": "Plotkai Team"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "From Commit to Production — Instantly"
           },
           {
             "type": "code",
-            "language": "bash",
-            "title": "Quick Next.js Setup",
-            "code": "npx create-next-app@latest my-app\ncd my-app\nnpm run dev"
+            "language": "yaml",
+            "title": "GitHub Actions Workflow for Cloud Run Deployment",
+            "code": "name: Deploy to Cloud Run\non:\n  push:\n    branches: [main]\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n      - name: Set up gcloud\n        uses: google-github-actions/setup-gcloud@v2\n        with:\n          project_id: ${{ secrets.GCP_PROJECT_ID }}\n          service_account_key: ${{ secrets.GCP_SA_KEY }}\n      - name: Deploy\n        run: gcloud run deploy yognishtha --source . --region=asia-south2 --platform=managed"
+          },
+          {
+            "type": "paragraph",
+            "text": "This pipeline ensures zero-touch deployment. The website is automatically rebuilt and redeployed whenever content or code changes — delivering a smooth experience both for the maintainers and the end users."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "One Iteration, One Vision"
+          },
+          {
+            "type": "paragraph",
+            "text": "The project required only a single iteration to reach production — a testament to clear communication, focused design, and automation-driven engineering. For Yognishtha Trust, this meant instant launch with long-term reliability, all at no recurring cost."
+          },
+          {
+            "type": "paragraph",
+            "text": "At Plotkai Interactive, we believe every digital product — even a simple website — should be sustainable, fast, and effortless to maintain. The Yognishtha Trust project is a small but powerful example of how smart engineering choices can make technology affordable for everyone."
           }
         ],
-        "readTime": "8 min read",
+        "readTime": "4 min read",
         "status": "published"
       }
     ]
