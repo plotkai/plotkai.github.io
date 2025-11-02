@@ -803,6 +803,8 @@ iframe#download, iframe#thanks {
 .post-preview-content {
   display: block;
   width: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .post-title {
