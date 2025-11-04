@@ -732,6 +732,13 @@ iframe#download, iframe#thanks {
 	flex-direction: column;
 }
 
+.header-wrapper .note {
+	text-align: center;
+	font-style: italic;
+	font-weight: 400;
+	font-size: smaller;
+}
+
 .header-inside {
 	display: flex;
 	flex-direction: row;
