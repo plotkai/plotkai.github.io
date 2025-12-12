@@ -166,6 +166,7 @@ nav a:first-child {
 	color: black;
 }
 a.download-big {
+	min-height: 56px;
 	font-size: 24px;
 	display: flex;
 	align-items: center;
