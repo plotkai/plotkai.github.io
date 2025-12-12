@@ -5,12 +5,12 @@
     "baseUrl": "https://plotkai.github.io",
     "posts": [
       {
-        "id": "1",
+        "id": "3",
         "title": "Hello from Plotkai Interactive – Why We Started",
         "slug": "hello-from-plotkai-interactive-why-we-started",
         "author": {
           "name": "Plotkai Team",
-          "email": "hello@plotkai.in",
+          "email": "contact@plotkai.in",
           "avatar": "img/blog/me.jpg"
         },
         "publishDate": "2025-10-23",
@@ -51,12 +51,68 @@
         "status": "published"
       },
       {
+        "id": "1",
+        "title": "Storoxo.com: Quick Commerce, Ultra Lean Stack",
+        "slug": "storoxo-quick-commerce-under-1000",
+        "author": {
+          "name": "Plotkai Team",
+          "email": "contact@plotkai.in",
+          "avatar": "img/blog/storoxo-logo-new-small.png"
+        },
+        "publishDate": "2025-12-12",
+        "lastModified": "2025-12-12",
+        "category": "Client Projects",
+        "tags": ["Quick Commerce", "Optimization", "Razorpay", "Full Stack"],
+        "excerpt": "How we built storoxo.com — a full-featured quick commerce platform for less than ₹1000/month, thanks to byte-level code optimization and non-volatile hosting.",
+        "featured": false,
+        "featuredImage": {
+          "url": "https://storoxo.com/assets/og-image.jpg",
+          "alt": "Storoxo Quick Commerce Preview",
+          "caption": "Storoxo.com — ultra-lean, full-stack, and affordable."
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Storoxo.com is a next-gen quick commerce site — live, fast, and built to scale. The challenge: deliver a full-stack experience (user signup, email, payments, admin, and more) for under ₹1000/month."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Byte-to-Byte Optimization"
+          },
+          {
+            "type": "paragraph",
+            "text": "Every line of code was tuned for performance. No bloat, no waste — just pure, efficient delivery. We used non-volatile hosting, so the site stays up and fast, with zero downtime."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Full-Stack, Fully Integrated"
+          },
+          {
+            "type": "list",
+            "listType": "unordered",
+            "items": [
+              "Razorpay payments built-in",
+              "User signup & email notifications",
+              "Admin dashboard, order management, and more"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The result? A quick commerce engine that’s affordable, robust, and ready for scale. Storoxo proves you don’t need a big budget for big impact."
+          }
+        ],
+        "readTime": "2 min read",
+        "status": "published"
+      },
+      {
         "id": "2",
         "title": "Yognishtha Trust: A Zero-Cost, Seamless Deployment Journey",
         "slug": "yognishtha-trust-zero-cost-deployment",
         "author": {
           "name": "Plotkai Team",
-          "email": "hello@plotkai.in",
+          "email": "contact@plotkai.in",
           "avatar": "img/blog/me.jpg"
         },
         "publishDate": "2025-10-23",
