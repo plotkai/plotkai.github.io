@@ -133,19 +133,21 @@
           const blogData = await response.json();
           console.log('Blog data loaded:', blogData);
           
+          // Sort posts by id (descending)
+          if (blogData.blog && Array.isArray(blogData.blog.posts)) {
+            blogData.blog.posts.sort((a, b) => Number(b.id) - Number(a.id));
+          }
+
           // Get the template
           const blogTemplateElement = document.getElementById('blog-template');
-          
           if (!blogTemplateElement) {
             throw new Error('Blog template not found');
           }
-          
           const blogTemplate = Handlebars.compile(blogTemplateElement.innerHTML);
-          
+
           // Render the blog list
           const html = blogTemplate(blogData);
           const blogPostsElement = document.getElementById('blog-posts');
-          
           if (blogPostsElement) {
             blogPostsElement.innerHTML = html;
             console.log('Blog posts rendered successfully');
