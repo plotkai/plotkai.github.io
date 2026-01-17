@@ -5,7 +5,7 @@
     "baseUrl": "https://plotkai.github.io",
     "posts": [
       {
-        "id": "3",
+        "id": "4",
         "title": "Hello from Plotkai Interactive – Why We Started",
         "slug": "hello-from-plotkai-interactive-why-we-started",
         "author": {
@@ -51,7 +51,7 @@
         "status": "published"
       },
       {
-        "id": "1",
+        "id": "2",
         "title": "Storoxo.com: Quick Commerce, Ultra Lean Stack",
         "slug": "storoxo-quick-commerce-under-1000",
         "author": {
@@ -107,7 +107,7 @@
         "status": "published"
       },
       {
-        "id": "2",
+        "id": "3",
         "title": "Yognishtha Trust: A Zero-Cost, Seamless Deployment Journey",
         "slug": "yognishtha-trust-zero-cost-deployment",
         "author": {
@@ -203,6 +203,77 @@
           }
         ],
         "readTime": "4 min read",
+        "status": "published"
+      },
+      {
+        "id": "1",
+        "title": "Chowk: Hyperlocal Networking for Creators",
+        "slug": "chowk-hyperlocal-networking-for-creators",
+        "author": {
+          "name": "Plotkai Team",
+          "email": "contact@plotkai.in",
+          "avatar": "img/blog/chowk_app_preview.jpg"
+        },
+        "publishDate": "2026-01-17",
+        "lastModified": "2026-01-17",
+        "category": "Product Launch",
+        "tags": ["Android App", "Networking", "Hyperlocal", "Digital Creators", "Product Launch"],
+        "excerpt": "Chowk is a scalable, mobile-ready Android app for digital creators to connect, network, and discover each other hyperlocally.",
+        "featured": true,
+        "featuredImage": {
+          "url": "img/blog/chowk_app_preview.jpg",
+          "alt": "Chowk App Preview",
+          "caption": "Chowk — discover creators near you"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Chowk is a scalable, mobile-ready Android app designed for digital creators to connect, network, and grow their community. Available now on the Google Play Store, Chowk brings hyperlocal discovery and real-time networking to your fingertips."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Hyperlocal Discovery"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chowk leverages map-based and GPS-powered technology to help users discover fellow creators nearby. Whether you're looking to collaborate, share ideas, or simply connect, Chowk makes it easy to find and interact with creators in your vicinity."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Scalable & Mobile-First"
+          },
+          {
+            "type": "paragraph",
+            "text": "Built for scale, Chowk ensures a seamless experience for users across devices. The app is optimized for performance, reliability, and ease of use — making it the go-to platform for creators on the move."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Stay Connected with Notifications"
+          },
+          {
+            "type": "paragraph",
+            "text": "Never miss an opportunity! Chowk supports instant notifications, keeping you updated about new connections, events, and hyperlocal happenings. The app is designed to foster real-time engagement and meaningful networking."
+          },
+          {
+            "type": "list",
+            "listType": "unordered",
+            "items": [
+              "Map-based user discovery",
+              "GPS-powered hyperlocal networking",
+              "Instant notifications for updates and events",
+              "Scalable, mobile-first architecture",
+              "Available now on chowk.app and Google Play Store"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Chowk is more than just an app — it's a community for creators to thrive, collaborate, and make meaningful connections. Download Chowk today and join the hyperlocal creator movement!"
+          }
+        ],
+        "readTime": "3 min read",
         "status": "published"
       }
     ]
